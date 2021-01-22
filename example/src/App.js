@@ -1,10 +1,24 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-import { ExampleComponent } from 'rsds-core'
-import 'rsds-core/dist/index.css'
+import { ColorHeadingComponent, ColorHeadingTwoComponent } from 'rsds-core'
 
-const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+export default class App extends Component{
+
+  render(){
+    return (
+      <div>
+        <ColorHeadingComponent
+          text = "Color Heading H1"
+          color = {"red"}
+        />
+        
+        <ColorHeadingTwoComponent 
+          text = "Color Sub Heading h2" 
+          color = {"blue"}
+        />
+
+      </div>
+    );
+  }
+  
 }
-
-export default App
